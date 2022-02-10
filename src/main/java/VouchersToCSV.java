@@ -1,6 +1,4 @@
 import com.opencsv.CSVWriter;
-
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -14,8 +12,8 @@ public class VouchersToCSV {
         String fileName = sc.next();
         String[] vouchersList = new String[vouchers.size()];
         vouchers.toArray(vouchersList);
-        try(CSVWriter writer = new CSVWriter(new FileWriter(fileName))){
+        try (CSVWriter writer = new CSVWriter(new FileWriter(fileName))) {
             writer.writeNext(vouchersList);
-            }
         }
     }
+}
